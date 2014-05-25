@@ -16,6 +16,8 @@ KazukiPort::Application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   resources :sculps
   
+  get "/category/:id" => "sculps#category", :as => "category_index"
+  
   resources :images do
     member do
       get 'show_image'

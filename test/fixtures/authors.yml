@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  name: MyString
+  history: MyText
+  onl_exb_his: MyText
+  exb_his: MyText
+
+two:
+  user_id: MyString
+  name: MyString
+  history: MyText
+  onl_exb_his: MyText
+  exb_his: MyText

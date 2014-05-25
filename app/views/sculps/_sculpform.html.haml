@@ -1,0 +1,18 @@
+%table{id: categoryno}
+  %thead
+    %tr
+      %th
+      %th
+      %th
+  %tbody#sortable-table
+    - sculpform.each do |sculpform|
+      %tr{id: sculpform.id}
+        %td= sculpform.category
+        %td= image_tag sculpform.image_url(:thumb).to_s if sculpform.image?
+        %td= sculpform.title
+        %td= sculpform.wide
+        %td= sculpform.depth
+        %td= sculpform.high
+        %td= link_to 'Show', sculpform
+        %td= link_to 'Edit', edit_sculp_path(sculpform)
+        %td= link_to 'Destroy', sculpform, method: :delete, data: { confirm: 'Are you sure?' }

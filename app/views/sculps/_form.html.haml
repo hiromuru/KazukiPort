@@ -1,0 +1,11 @@
+= form_for(@sculp) do |f|
+  - if @sculp.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@sculp.errors.count, "error")
+        prohibited this sculp from being saved:
+      %ul
+        - @sculp.errors.full_messages.each do |msg|
+          %li= msg
+  .actions
+    = f.submit

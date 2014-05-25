@@ -1,0 +1,25 @@
+<h1>Listing exhibs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @exhibs.each do |exhib| %>
+      <tr>
+        <td><%= link_to 'Show', exhib %></td>
+        <td><%= link_to 'Edit', edit_exhib_path(exhib) %></td>
+        <td><%= link_to 'Destroy', exhib, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Exhib', new_exhib_path %>

@@ -1,0 +1,5 @@
+%p#notice= notice
+%p= image_tag @sculp.image_url.to_s
+= link_to 'Edit', edit_sculp_path(@sculp)
+|
+#{link_to 'Back', sculps_path}

@@ -1,0 +1,15 @@
+= form_for(@sculp) do |f|
+  = f.file_field :image
+  = f.label :title
+  = f.text_field :title
+  = f.label :wide
+  = f.text_field :wide
+  = f.label :depth
+  = f.text_field :depth
+  = f.label :high
+  = f.text_field :high
+  = f.label :製造年
+  = f.date_select :madein
+  = f.label :作品ジャンル
+  = f.select :category, {"1" => 1, "2" => 2, "3" => 3}
+  = f.submit "作品を追加"

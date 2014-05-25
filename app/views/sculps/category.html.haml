@@ -1,0 +1,8 @@
+#formwrap= render(:partial => "sculpnewform")
+#nav
+  %p= link_to 'category1', category_index_path(1), { class: ""}
+  %p= link_to 'category2', category_index_path(2), { class: ""}
+  %p= link_to 'category3', category_index_path(3), { class: ""}
+%h1
+  Category#{@categoryno}
+= render(:partial => "sculpform",:object => @sculpw,:locals => { :categoryno => @categoryno })
